@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='utah',
-    version='0.1',
+    version='0.2',
     description='The official module for Utah Python / SLCPython',
     long_description=readme(),
     classifiers=[
