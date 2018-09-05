@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='utah',
-    version='0.2',
+    version='0.9',
     description='The official module for Utah Python / SLCPython',
     long_description=readme(),
     classifiers=[
@@ -21,7 +21,10 @@ setup(
     author_email='faris@theluckybead.com',
     license='MIT',
     packages=['utah'],
+    install_requires=[
+        'meetup-api'
+    ],
     zip_safe=False,
     test_suite='nose.collector',
-    test_require=['nose']
+    test_require=['pytest', 'pipenv']
 )
