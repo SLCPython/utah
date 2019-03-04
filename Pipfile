@@ -4,11 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-utah = {editable = true, path = "."}
+utah = {editable = true,path = "."}
 meetup-api = "*"
+pytest = "*"
 
 [dev-packages]
 pytest = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"

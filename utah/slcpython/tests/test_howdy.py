@@ -1,8 +1,9 @@
-import sys
 from contextlib import contextmanager
-from unittest import TestCase
-
 from io import StringIO
+import sys
+
+from unittest import TestCase
+from unittest.mock import patch
 
 from utah.slcpython import howdy
 
@@ -19,7 +20,8 @@ def captured_output():
 
 
 class TestHowdy(TestCase):
-    def test_howdy_prints_info(self):
+    @patch('utah.slcpython.meetup.api')
+    def test_howdy_prints_info(self, client):
         with captured_output() as (out, err):
             howdy()
         output = out.getvalue()
